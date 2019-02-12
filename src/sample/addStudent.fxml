@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="524.0" prefWidth="574.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddStudent">
+   <children>
+      <Label alignment="CENTER" layoutX="135.0" layoutY="32.0" prefHeight="42.0" prefWidth="317.0" text="IT_RUN" textFill="#a84e4e">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="163.0" layoutY="96.0" prefHeight="25.0" prefWidth="294.0" promptText="Name" />
+      <TextField fx:id="txtPhone" layoutX="163.0" layoutY="134.0" prefHeight="25.0" prefWidth="294.0" promptText="Phone" />
+      <Button fx:id="btnOk" layoutX="163.0" layoutY="229.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="OK" />
+      <Button fx:id="btnCancel" layoutX="261.0" layoutY="229.0" mnemonicParsing="false" text="Cancel" />
+      <TextField fx:id="txtEMail" layoutX="163.0" layoutY="172.0" prefHeight="25.0" prefWidth="294.0" promptText="e mail" />
+      <CheckBox fx:id="checkIsActive" layoutX="163.0" layoutY="204.0" mnemonicParsing="false" text="CheckBox" />
+      <TableView fx:id="tbStudents" layoutX="7.0" layoutY="268.0" onMouseClicked="#onMouseClicked" prefHeight="256.0" prefWidth="574.0">
+        <columns>
+          <TableColumn fx:id="clmId" prefWidth="75.0" text="ИД" />
+          <TableColumn fx:id="clmName" prefWidth="280.0" text="ФИО" />
+            <TableColumn fx:id="clmPhone" prefWidth="216.0" text="Номер телефона" />
+        </columns>
+      </TableView>
+      <MenuBar layoutX="508.0" prefHeight="25.0" prefWidth="73.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Меню">
+            <items>
+              <MenuItem fx:id="barCreate" mnemonicParsing="false" onAction="#onNewClicked" text="Создать" />
+                  <MenuItem fx:id="barUpdate" mnemonicParsing="false" onAction="#onEditClicked" text="Редактировать" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="btnBack" layoutX="-5.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="&lt;- назад" />
+   </children>
+</AnchorPane>
